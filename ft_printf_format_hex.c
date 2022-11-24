@@ -6,7 +6,7 @@
 /*   By: gde-mora <gde-mora@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 00:02:01 by gde-mora          #+#    #+#             */
-/*   Updated: 2022/07/24 04:51:27 by gde-mora         ###   ########.fr       */
+/*   Updated: 2022/09/06 02:14:46 by gde-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,16 @@ int	ft_printf_upper_x(unsigned long int num)
 	}
 	ft_printf_s(str);
 	free(str);
+	return (len);
+}
+
+int	ft_printf_p(unsigned long int num)
+{
+	int	len;
+
+	if (num == 0)
+		return (ft_putstr("(nil)"));
+	len = ft_putstr("0x");
+	len += ft_printf_lower_x(num);
 	return (len);
 }

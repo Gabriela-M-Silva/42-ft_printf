@@ -12,7 +12,7 @@
 
 NAME = libftprintf.a
 
-SRC = ft_printf.c ft_printf_format_1.c ft_printf_format_hex.c
+SRC = ft_printf.c ft_printf_format_ascii.c ft_printf_format_hex.c
 
 LIBFT_COMPILE = cd libft && make
 

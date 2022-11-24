@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_format_1.c                               :+:      :+:    :+:   */
+/*   ft_printf_format_ascii.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gde-mora <gde-mora@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 23:11:20 by gde-mora          #+#    #+#             */
-/*   Updated: 2022/07/24 05:42:48 by gde-mora         ###   ########.fr       */
+/*   Updated: 2022/09/06 02:14:36 by gde-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,6 @@ int	ft_printf_s(char *str)
 		return (ft_putstr("(null)"));
 	ft_putstr(str);
 	return (ft_strlen(str));
-}
-
-int	ft_printf_p(unsigned long int num)
-{
-	int	len;
-
-	if (num == 0)
-		return (ft_putstr("(nil)"));
-	len = ft_putstr("0x");
-	len += ft_printf_lower_x(num);
-	return (len);
 }
 
 int	ft_printf_d_and_i(int num)
